@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 const MY_KEY = "AIzaSyAEPRU-Zb3oXbl8flKWJppEU2-PUUlwCWI"
 const GoogleMap = ({ google, latitude, longitude }) => {
@@ -11,7 +11,12 @@ const GoogleMap = ({ google, latitude, longitude }) => {
         zoom={17}
         initialCenter={{lat: 37.486999, lng: 127.046852}}
         center={{lat : latitude, lng : longitude}}
-      />
+      >
+        <Marker 
+          position={{lat : latitude, lng : longitude}}
+          title="location"
+        />
+      </Map>
     </Fragment>
   )
 }
