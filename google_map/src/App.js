@@ -4,8 +4,8 @@ import Map from './Map';
 import SearchBar from './SearchBar';
 
 function App() {
-  const [latitude, setLatitude] = useState(1)
-  const [longitude, setLongitude] = useState(2)
+  const [latitude, setLatitude] = useState()
+  const [longitude, setLongitude] = useState()
   return (
     <Fragment>
       <SearchBar 
