@@ -11,7 +11,7 @@ const SearchBar = ({setLatitude, setLongitude}) => {
         name="latitude"
         id="latitude"
         placeholder="위도"
-        onChange={(e)=>{setLat(e.target.value)}}
+        onChange={(e)=>{setLat(Number(e.target.value))}}
       />
       <label htmlFor="longitude"> 경도 : </label>
       <input
@@ -19,7 +19,7 @@ const SearchBar = ({setLatitude, setLongitude}) => {
         name="longitude"
         id="longitude"
         placeholder="경도"
-        onChange={(e)=>{setLng(e.target.value)}}
+        onChange={(e)=>{setLng(Number(e.target.value))}}
       />
       <button type="button" onClick={() => {
         setLatitude(lat)
